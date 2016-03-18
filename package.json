@@ -1,0 +1,29 @@
+{
+  "name": "redux-localstorage",
+  "version": "0.0.1",
+  "description": "redux local storage middleware",
+  "main": "dist/middleware.js",
+  "scripts": {
+    "compile": "babel -d dist/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bentatum/redux-localstorage.git"
+  },
+  "keywords": [
+    "redux",
+    "localStorage",
+    "middleware"
+  ],
+  "author": "bentatum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bentatum/redux-localstorage/issues"
+  },
+  "homepage": "https://github.com/bentatum/redux-localstorage#readme",
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "store2": "^2.3.2"
+  }
+}
