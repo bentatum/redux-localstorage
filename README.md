@@ -1,4 +1,4 @@
-# redux-simple-storage
+# redux-simplestorage
 
 ## Installation
 

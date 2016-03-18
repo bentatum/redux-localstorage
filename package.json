@@ -1,5 +1,5 @@
 {
-  "name": "redux-simple-storage",
+  "name": "redux-simplestorage",
   "version": "0.0.1",
   "description": "redux local storage middleware",
   "main": "dist/middleware.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bentatum/redux-localstorage.git"
+    "url": "git+https://github.com/bentatum/redux-simplestorage.git"
   },
   "keywords": [
     "redux",
@@ -19,9 +19,9 @@
   "author": "bentatum",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bentatum/redux-simple-storage/issues"
+    "url": "https://github.com/bentatum/redux-simplestorage/issues"
   },
-  "homepage": "https://github.com/bentatum/redux-simple-storage#readme",
+  "homepage": "https://github.com/bentatum/redux-simplestorage#readme",
   "dependencies": {
     "lodash": "^4.6.1",
     "store2": "^2.3.2"
