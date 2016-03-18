@@ -1,6 +1,6 @@
 {
   "name": "redux-simplestorage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "redux local storage middleware",
   "main": "dist/middleware.js",
   "scripts": {

@@ -1,10 +1,11 @@
 # redux-simplestorage
 
 ## Installation
+`npm i redux-simplestorage`
 
 ```
 import { createStore, applyMiddleware } from 'redux'
-import storageMiddleware from 'redux-localstorage'
+import storageMiddleware from 'redux-simplestorage'
 const reduxStore = applyMiddleware([storageMiddleware])(createStore)
 ```
 
