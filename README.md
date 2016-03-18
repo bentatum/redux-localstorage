@@ -1,4 +1,4 @@
-# redux-localstorage
+# redux-simple-storage
 
 ## Installation
 
