@@ -1,5 +1,15 @@
 # redux-localstorage
 
+## Installation
+
+```
+import { createStore, applyMiddleware } from 'redux'
+import storageMiddleware from 'redux-localstorage'
+const reduxStore = applyMiddleware([storageMiddleware])(createStore)
+```
+
+## Usage
+
 To store data in localStorage via redux action, simply include a storage key. The storage value should be an object whose keys will be stored in localStorage.
 
 ```
