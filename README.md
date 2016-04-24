@@ -37,3 +37,5 @@ Later on...
 ```javascript
 const session = localStorage.getItem(SESSION)
 ```
+
+[Demo](http://benjamintatum.com/redux-simplestorage)

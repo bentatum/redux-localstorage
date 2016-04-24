@@ -1,7 +1,7 @@
 {
   "name": "redux-simplestorage",
-  "version": "1.0.0",
-  "description": "redux local storage middleware",
+  "version": "1.0.1",
+  "description": "Seamless redux and localStorage",
   "main": "dist/middleware.js",
   "scripts": {
     "lint": "standard src/**",
