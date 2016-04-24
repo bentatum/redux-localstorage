@@ -1,22 +1,21 @@
-import _ from 'lodash'
-import localStore from 'store2'
+import { default as localStore } from 'store2'
 
-export default ({ dispatch, getState }) => {
-    return (next) => (action) => {
-        if (typeof action === 'function') {
-            return action(dispatch, getState)
-        }
+export default ({ dispatch, getState }) => (next) => (action) => {
+  if (typeof action === 'function') {
+    return action(dispatch, getState)
+  }
 
-        const { storage } = action
+  const { storage } = action
 
-        if (!_.isObject(storage)) {
-            return next(action)
-        }
+  if (!storage || typeof storage !== 'object') {
+    return next(action)
+  }
 
-        _.forEach(storage, (value, key) => 
-            localStore.set(key, value)
-        )
-        
-        return next(action)
+  for (let prop in storage) {
+    if (storage.hasOwnProperty(prop)) {
+      localStore.set(prop, storage[prop])
     }
+  }
+
+  return next(action)
 }

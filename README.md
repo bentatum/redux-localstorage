@@ -1,9 +1,13 @@
 # redux-simplestorage
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+Use this to seamlessly store data in localStorage via redux actions.
+
 ## Installation
 `npm i redux-simplestorage`
 
-```
+```javascript
 import { createStore, applyMiddleware } from 'redux'
 import storageMiddleware from 'redux-simplestorage'
 const reduxStore = applyMiddleware([storageMiddleware])(createStore)
@@ -11,20 +15,24 @@ const reduxStore = applyMiddleware([storageMiddleware])(createStore)
 
 ## Usage
 
-To store data in localStorage via redux action, simply include a storage key. The storage value should be an object whose keys will be stored in localStorage.
+To store data in localStorage via redux action, simply include a storage key.
+The storage value is an object whose keys will be stored in localStorage.
 
-```
-const SESSION_STORED_SUCCESSFULLY = 'SESSION_STORED_SUCCESSFULLY'
-const MY_SESSION_KEY = 'YOUR_SESSION_KEY'
+```javascript
+const STORE_SESSION = 'STORE_SESSION'
+const SESSION = 'SESSION'
 
 export function storeSession(session) {
     return {
-        type: SESSION_STORED_SUCCESSFULLY,
+        type: STORE_SESSION,
         storage: {
-            [`${MY_SESSION_KEY}`]: session
+            [SESSION]: session
         }
     }
 }
 ```
 
-Once dispatched, the `storeSession` action will have saved the session data for you under `MY_SESSION_KEY` and `localStorage.getItem(MY_SESSION_KEY)` should work as expected.
+Later on...
+```
+const session = localStorage.getItem(SESSION)
+```
