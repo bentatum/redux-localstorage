@@ -34,6 +34,6 @@ export function storeSession(session) {
 ```
 
 Later on...
-```
+```javascript
 const session = localStorage.getItem(SESSION)
 ```
