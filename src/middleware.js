@@ -1,8 +1,12 @@
 import { default as localStore } from 'store2'
 
-export default ({ dispatch, getState }) => (next) => (action) => {
+export default store => next => action => {
+  if (!action) {
+    return next()
+  }
+
   if (typeof action === 'function') {
-    return action(dispatch, getState)
+    return action(store.dispatch, store.getState)
   }
 
   const { storage } = action
